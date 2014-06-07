@@ -4,12 +4,12 @@
 # ÉTAPES
 * Exemple bateau ["/"](http://localhost:8080/)
 * Ajout de spring data (utilisation de [lombock](http://projectlombok.org/) et [queryDsl](http://www.querydsl.com/))
-    * Avec une base en mémoire ["/persons"](http://localhost:8080/persons/) 
+    * Avec une base en mémoire  
+* Ajout d'accès REST pour le CRUD ["/person"](http://localhost:8080/person/)
 
 # TODO
 * Spring data
     * Avec une base MySQL
-* Ajout d'accès REST pour le CRUD
 * Ajout de spring security (CAS)
 * Ajout d'une vue Angular JS
 
