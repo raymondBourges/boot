@@ -9,5 +9,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  */
 @RepositoryRestResource(collectionResourceRel = "person", path = "person")
 public interface PersonRepository extends CrudRepository<Person, Long>, QueryDslPredicateExecutor<Person> {
-//    Page<Person> findAll(Pageable pageable);
 }

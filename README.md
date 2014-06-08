@@ -6,6 +6,7 @@
 * Ajout de spring data (utilisation de [lombock](http://projectlombok.org/) et [queryDsl](http://www.querydsl.com/))
     * Avec une base en mémoire  
 * Ajout d'accès REST pour le CRUD ["/person"](http://localhost:8080/person/)
+* Une requête avec du queryDSL ["/query?name=a](http://localhost:8080/query?name=a)
 
 # TODO
 * Spring data

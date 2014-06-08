@@ -10,4 +10,6 @@ import java.util.List;
 public interface PersonService {
 
     public List<Person> getAllPersons();
+
+    public List<Person> personNameContains(String content);
 }
