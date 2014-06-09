@@ -1,4 +1,4 @@
-package hello.domain;
+package fr.test.boot.domain;
 
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.CrudRepository;

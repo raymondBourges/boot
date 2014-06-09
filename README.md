@@ -1,5 +1,5 @@
 # Référence
-[doc spring-boot](http://docs.spring.io/spring-boot/docs/1.0.2.RELEASE/reference/htmlsingle/)
+[doc spring-fr.test.boot](http://docs.spring.io/spring-fr.test.boot/docs/1.0.2.RELEASE/reference/htmlsingle/)
 
 # ÉTAPES
 * Exemple bateau ["/"](http://localhost:8080/)

@@ -1,9 +1,9 @@
-package hello.service;
+package fr.test.boot.service;
 
 import com.mysema.query.types.expr.BooleanExpression;
-import hello.domain.Person;
-import hello.domain.PersonRepository;
-import hello.domain.QPerson;
+import fr.test.boot.domain.Person;
+import fr.test.boot.domain.PersonRepository;
+import fr.test.boot.domain.QPerson;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;

@@ -1,6 +1,6 @@
-package hello.service;
+package fr.test.boot.service;
 
-import hello.domain.Person;
+import fr.test.boot.domain.Person;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>test.fr</groupId>
+    <groupId>fr.test</groupId>
     <artifactId>boot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -14,12 +14,12 @@
         <version>1.0.2.RELEASE</version>
     </parent>
     <dependencies>
-        <!-- Spring-boot : appli web -->
+        <!-- Spring-fr.test.boot : appli web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- Spring-boot : Spring-data JPA -->
+        <!-- Spring-fr.test.boot : Spring-data JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -52,11 +52,18 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-rest-webmvc</artifactId>
         </dependency>
+        <!-- Spring-security -->
+        <!--
+        <dependency>
+            <groupId>org.springframework.fr.test.boot</groupId>
+            <artifactId>spring-fr.test.boot-starter-security</artifactId>
+        </dependency>
+        -->
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Spring-boot : plugin maven -->
+            <!-- Spring-fr.test.boot : plugin maven -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
