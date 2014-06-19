@@ -5,7 +5,7 @@
 * Exemple bateau ["/"](http://localhost:9090/)
 * Ajout de spring data (utilisation de [lombock](http://projectlombok.org/) et [queryDsl](http://www.querydsl.com/))
     * Avec une base en mémoire  
-* Ajout d'accès REST pour le CRUD ["/person"](http://localhost:9090/person/)
+* Ajout d'accès REST pour le CRUD ["/persons"](http://localhost:9090/persons/)
 * Une requête avec du queryDSL ["/query?name=a](http://localhost:9090/query?name=a)
 * Ajout de spring security (CAS)
 

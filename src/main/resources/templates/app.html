@@ -1,0 +1,38 @@
+<html ng-app="exampleApp"
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <script src="webjars/angularjs/1.2.18/angular.js"></script>
+    <script src="webjars/lodash/2.4.1/lodash.js"></script>
+    <script src="webjars/restangular/1.4.0/restangular.js"></script>
+    <script src="js/app.js"></script>
+    <script th:inline="javascript">
+        var token = /*[[${_csrf.token}]]*/ 'token';
+        app.value('token', token);
+    </script>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.1.1/css/bootstrap.css" />
+</head>
+<body ng-controller="PersonCtrl" ng-init="init(token)">
+<h1>Persons 3</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Firstame</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in persons">
+        <td>{{person.firstName}}</td>
+        <td>{{person.name}}</td>
+        <td>
+            <button type="button" class="btn btn-default" ng-click="remove(person)">
+                <span class="glyphicon glyphicon-minus"></span> Remove
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

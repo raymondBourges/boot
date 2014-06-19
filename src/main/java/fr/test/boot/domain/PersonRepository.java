@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by bourges on 06/06/14.
  */
-@RepositoryRestResource(collectionResourceRel = "person", path = "person")
+@RepositoryRestResource(collectionResourceRel="persons", path="persons")
 @Component
 public interface PersonRepository extends CrudRepository<Person, Long>, QueryDslPredicateExecutor<Person> {
 }
