@@ -40,4 +40,12 @@ public class PersonServiceImpl implements PersonService {
         }
         return list;
     }
+
+    @Override
+    public void addSomePersons() {
+        personRepository.save(new Person("Sharapova", "Maria"));
+        personRepository.save(new Person("Halep", "Simona"));
+        personRepository.save(new Person("Nadal", "Rafael"));
+        personRepository.save(new Person("Djokovic", "Novak"));
+    }
 }

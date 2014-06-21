@@ -12,4 +12,6 @@ public interface PersonService {
     public List<Person> getAllPersons();
 
     public List<Person> personNameContains(String content);
+
+    public void addSomePersons();
 }

@@ -4,6 +4,7 @@ import fr.test.boot.domain.Person;
 import fr.test.boot.service.PersonService;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
@@ -25,6 +26,11 @@ public class SampleRestController {
     @RequestMapping("/query")
     List<Person> queryDslExample(@Param("name") String name) {
         return personService.personNameContains(name);
+    }
+
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    void addSomePersons() {
+        personService.addSomePersons();
     }
 
 }

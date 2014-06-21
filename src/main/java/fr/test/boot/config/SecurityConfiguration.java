@@ -1,5 +1,6 @@
-package fr.test.boot.auth;
+package fr.test.boot.config;
 
+import fr.test.boot.auth.UserDetailsService;
 import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
