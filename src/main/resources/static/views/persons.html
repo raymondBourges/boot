@@ -1,0 +1,24 @@
+<div>
+    <h1>Persons</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Firstame</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in persons">
+            <td>{{person.firstName}}</td>
+            <td>{{person.name}}</td>
+            <td>
+                <button type="button" class="btn btn-default" ng-click="remove(person)">
+                    <span class="glyphicon glyphicon-minus"></span> Remove
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-default" ng-click="addSomePersons()">Add some persons</button>
+</div>
