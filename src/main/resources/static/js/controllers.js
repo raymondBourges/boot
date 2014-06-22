@@ -1,27 +1,6 @@
 var appControllers = angular.module('appControllers', []);
 
-appControllers.controller('PersonsController', function ($scope, $http, Restangular, token) {
-
-    Restangular.addResponseInterceptor(function (data, operation, what) {
-        //Restangular ne supporte pas encore HAL (https://github.com/mgonto/restangular/issues/661)
-        if (operation === 'getList') {
-            if(data._embedded) {
-                return data._embedded[what];
-            }
-            else {
-                return [];
-            }
-        }
-        return data;
-    });
-
-    Restangular.setDefaultHeaders({'X-CSRF-TOKEN': token});
-
-
-    //selfLink a la spring-data-rest
-    Restangular.setRestangularFields({
-        selfLink: '_links.self.href'
-    });
+appControllers.controller('PersonsController', function ($scope, $location, Restangular) {
 
     refreshPersons();
 
@@ -37,6 +16,10 @@ appControllers.controller('PersonsController', function ($scope, $http, Restangu
         });
     };
 
+    $scope.editPerson = function(person) {
+        $location.path("/person/" + person.id);
+    };
+
     function refreshPersons() {
         var personsUrl = Restangular.all('persons');
         personsUrl.getList().then(function(persons) {
@@ -44,4 +27,21 @@ appControllers.controller('PersonsController', function ($scope, $http, Restangu
         });
     }
 
+});
+
+appControllers.controller('PersonController', function($scope, $location, $routeParams, Restangular) {
+
+    Restangular.one('persons', $routeParams.id).get().then(function(person) {
+        $scope.person = person;
+        $scope.title = person.firstName + " " + person.name;
+    })
+
+    $scope.reset = function() {
+        $location.path("/");
+    }
+
+    $scope.update = function(person) {
+        person.put();
+        $location.path("/");
+    }
 });
