@@ -8,9 +8,14 @@
 * Ajout d'accès REST pour le CRUD ["/persons"](http://localhost:9090/persons/)
 * Une requête avec du queryDSL ["/query?name=a](http://localhost:9090/query?name=a)
 * Ajout de spring security (CAS)
+* Ajout d'une vue Angular JS ["/app"](http://localhost:9090/app/)
 
 # TODO
 * Spring data
     * Avec une base MySQL
-* Ajout d'une vue Angular JS
 
+# USAGE
+* Configuration par défaut
+    * **mvn spring-boot:run**        
+* Configuration avancé par surcharge des valeurs de ["application.properties"](src/main/resources/application.properties)
+    * Ex : **mvn spring-boot:run -Drun.arguments="--cas.url.prefix=http://cas.domain.fr/cas"**
