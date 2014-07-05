@@ -11,7 +11,7 @@ app.config(['$routeProvider',
                 templateUrl: 'views/persons.html',
                 controller: 'PersonsController'
             }).
-            when('/person/:id', {
+            when('/person/:id?', {
                 templateUrl: 'views/person.html',
                 controller: 'PersonController'
             }).
