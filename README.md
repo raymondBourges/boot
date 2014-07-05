@@ -17,5 +17,5 @@
 # USAGE
 * Configuration par défaut
     * **mvn spring-boot:run**        
-* Configuration avancé par surcharge des valeurs de ["application.properties"](src/main/resources/application.properties)
+* Configuration avancée par surcharge des valeurs de ["application.properties"](src/main/resources/application.properties)
     * Ex : **mvn spring-boot:run -Drun.arguments="--cas.url.prefix=http://cas.domain.fr/cas"**
