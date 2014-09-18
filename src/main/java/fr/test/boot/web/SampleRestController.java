@@ -3,6 +3,9 @@ package fr.test.boot.web;
 import fr.test.boot.domain.Person;
 import fr.test.boot.service.PersonService;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +23,9 @@ public class SampleRestController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello World!";
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String user = auth.getName();
+        return "Hello World! (user: " + user + ")";
     }
 
     @RequestMapping("/query")

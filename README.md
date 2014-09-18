@@ -8,7 +8,7 @@
 * Ajout d'accès REST pour le CRUD ["/persons"](http://localhost:9090/persons/)
 * Une requête avec du queryDSL ["/query?name=a](http://localhost:9090/query?name=a)
 * Ajout de spring security (CAS)
-* Ajout d'une vue Angular JS ["/app"](http://localhost:9090/app/)
+* Ajout d'une vue Angular JS ["/app"](http://localhost:9090/app)
 
 # TODO
 * Spring data
